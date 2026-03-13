@@ -475,21 +475,21 @@
           <div class="fp-stats">
             <div class="fp-stat"><span class="fp-num red">7</span><span class="fp-slabel">High Risk</span></div>
             <div class="fp-stat"><span class="fp-num yellow">2</span><span class="fp-slabel">This Week</span></div>
-            <div class="fp-stat"><span class="fp-num green">$1.25M</span><span class="fp-slabel">Territory ARR</span></div>
+            <div class="fp-stat"><span class="fp-num green">—</span><span class="fp-slabel">Territory ARR</span></div>
           </div>
           <div class="fp-card">
             <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;">
-              <span style="font-size:11px;font-weight:600;">Nationals Soccer Club</span>
+              <span style="font-size:11px;font-weight:600;">Team 1</span>
               <span class="fp-risk">HIGH RISK</span>
             </div>
-            <div style="font-size:10px;color:#555;line-height:1.5;">Score 73 · $84.7K ARR · Renewal Aug 2025 overdue<br>130 support cases · No CSM contact on record</div>
+            <div style="font-size:10px;color:#555;line-height:1.5;">Renewal Aug 2025 overdue<br>130 support cases · No CSM contact on record</div>
           </div>
           <div class="fp-card" style="opacity:0.6;">
             <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;">
               <span style="font-size:11px;font-weight:600;">Sporting Columbus</span>
               <span class="fp-risk">HIGH RISK</span>
             </div>
-            <div style="font-size:10px;color:#555;line-height:1.5;">Score 75 · $25K ARR · Renewal Sep 2025 overdue</div>
+            <div style="font-size:10px;color:#555;line-height:1.5;">Renewal Sep 2025 overdue</div>
           </div>
         </div>
       </div>
@@ -966,8 +966,8 @@ const PEEKS = {
         <div class="mock-stat"><div class="mock-stat-num" style="color:var(--accent)">7</div><div class="mock-stat-lbl">Remove</div></div>
       </div>
       <table class="mock-table"><thead><tr><th>Contact</th><th>Sent</th><th>Replies</th><th>Status</th></tr></thead><tbody>
-        <tr><td>Doug B. · Midwest United</td><td>5</td><td>4</td><td><span class="dot dot-green"></span>Active</td></tr>
-        <tr><td>Julie M. · MS Soccer</td><td>7</td><td>5</td><td><span class="dot dot-green"></span>Active</td></tr>
+        <tr><td>Rep A · Team 2</td><td>5</td><td>4</td><td><span class="dot dot-green"></span>Active</td></tr>
+        <tr><td>Rep B · Team 17</td><td>7</td><td>5</td><td><span class="dot dot-green"></span>Active</td></tr>
         <tr><td>Frank G. · FedEx</td><td>3</td><td>0</td><td><span class="dot dot-red"></span>Remove</td></tr>
         <tr><td>Alex K. · Kolping</td><td>2</td><td>0</td><td><span class="dot dot-red"></span>Remove</td></tr>
         <tr><td>Scott S. · Sievering</td><td>2</td><td>1</td><td><span class="dot dot-yellow"></span>At Risk</td></tr>
@@ -980,11 +980,11 @@ const PEEKS = {
     data: ['Salesforce export', 'Manual contact list'],
     visual: `
       <table class="mock-table"><thead><tr><th>Club</th><th>Team</th><th>Assist</th><th>Assist+</th></tr></thead><tbody>
-        <tr><td>Midwest United</td><td>U19 MLS Next</td><td style="color:var(--green);font-size:16px">✓</td><td style="color:var(--green);font-size:16px">✓</td></tr>
-        <tr><td>Alabama FC</td><td>U16 ECNL</td><td style="color:var(--green);font-size:16px">✓</td><td style="color:var(--accent);font-size:16px">✗</td></tr>
+        <tr><td>Team 2</td><td>U19 MLS Next</td><td style="color:var(--green);font-size:16px">✓</td><td style="color:var(--green);font-size:16px">✓</td></tr>
+        <tr><td>Team 3</td><td>U16 ECNL</td><td style="color:var(--green);font-size:16px">✓</td><td style="color:var(--accent);font-size:16px">✗</td></tr>
         <tr><td>USA of Indiana</td><td>Gold Boys</td><td style="color:var(--accent);font-size:16px">✗</td><td style="color:var(--accent);font-size:16px">✗</td></tr>
-        <tr><td>Chicago Rush</td><td>U14 Girls</td><td style="color:var(--green);font-size:16px">✓</td><td style="color:var(--green);font-size:16px">✓</td></tr>
-        <tr><td>Indy Premier</td><td>U12 Boys</td><td style="color:var(--green);font-size:16px">✓</td><td style="color:var(--accent);font-size:16px">✗</td></tr>
+        <tr><td>Team 4</td><td>U14 Girls</td><td style="color:var(--green);font-size:16px">✓</td><td style="color:var(--green);font-size:16px">✓</td></tr>
+        <tr><td>Team 5</td><td>U12 Boys</td><td style="color:var(--green);font-size:16px">✓</td><td style="color:var(--accent);font-size:16px">✗</td></tr>
       </tbody></table>`
   },
   onboarding: {
@@ -993,7 +993,7 @@ const PEEKS = {
     desc: 'Interactive checklist tracker for each new account showing exactly where they are in the onboarding process. Quickly see which accounts are stuck at camera setup, team creation, or first recording — so nothing slips.',
     data: ['Manual input', 'Salesforce export'],
     visual: `
-      <div style="margin-bottom:12px;font-size:11px;color:var(--muted);font-weight:500;">FC 1974 Libertyville — Onboarding Progress</div>
+      <div style="margin-bottom:12px;font-size:11px;color:var(--muted);font-weight:500;">Team 6 — Onboarding Progress</div>
       <ul class="mock-checklist">
         <li><span class="ck ck-done">✓</span><span class="ck-done-text">Account created & contract signed</span></li>
         <li><span class="ck ck-done">✓</span><span class="ck-done-text">Camera shipped & delivered</span></li>
@@ -1011,7 +1011,7 @@ const PEEKS = {
     visual: `
       <div class="mock-email">
         <div class="mock-email-subject">Re: Hudl Follow Up — Next Steps</div>
-        <div class="mock-email-body">Hi Julie,<br><br>Thanks for walking through that with me — glad we got it sorted. Wanted to check in on the download issue we discussed. Were you able to get those games pulled? If not, happy to get on a quick call and walk through it together.<br><br>Also wanted to ask about Paul's interest you mentioned — would love to connect him with the right person here.<br><br>Thanks! Taylor</div>
+        <div class="mock-email-body">Hi Coach B,<br><br>Thanks for walking through that with me — glad we got it sorted. Wanted to check in on the download issue we discussed. Were you able to get those games pulled? If not, happy to get on a quick call and walk through it together.<br><br>Also wanted to ask about Paul's interest you mentioned — would love to connect him with the right person here.<br><br>Thanks! Taylor</div>
       </div>`
   },
   weeklylist: {
@@ -1022,11 +1022,11 @@ const PEEKS = {
     visual: `
       <div style="font-size:11px;color:var(--muted);margin-bottom:10px;font-weight:500;">Monday, March 3 — Your Priority List</div>
       <table class="mock-table"><thead><tr><th>#</th><th>Account</th><th>Reason</th></tr></thead><tbody>
-        <tr><td style="color:var(--accent)">1</td><td>FC 1974 Libertyville</td><td>No contact in 18 days</td></tr>
-        <tr><td style="color:var(--accent)">2</td><td>Chicago Rush</td><td>Support issue open</td></tr>
-        <tr><td style="color:var(--yellow)">3</td><td>Midwest United</td><td>Renewal in 45 days</td></tr>
-        <tr><td style="color:var(--yellow)">4</td><td>Alabama FC</td><td>Awaiting reply 5 days</td></tr>
-        <tr><td style="color:var(--green)">5</td><td>North FC</td><td>Follow up on training call</td></tr>
+        <tr><td style="color:var(--accent)">1</td><td>Team 6</td><td>No contact in 18 days</td></tr>
+        <tr><td style="color:var(--accent)">2</td><td>Team 4</td><td>Support issue open</td></tr>
+        <tr><td style="color:var(--yellow)">3</td><td>Team 2</td><td>Renewal in 45 days</td></tr>
+        <tr><td style="color:var(--yellow)">4</td><td>Team 3</td><td>Awaiting reply 5 days</td></tr>
+        <tr><td style="color:var(--green)">5</td><td>Team 7</td><td>Follow up on training call</td></tr>
       </tbody></table>`
   },
   pipeline: {
@@ -1036,9 +1036,9 @@ const PEEKS = {
     data: ['Salesforce export (CSV/manual paste)'],
     visual: `
       <table class="mock-table"><thead><tr><th>Club</th><th>Stage</th><th>Days Stuck</th><th>Suggested Action</th></tr></thead><tbody>
-        <tr><td>LA FC Academy</td><td>Demo Sent</td><td style="color:var(--accent)">22 days</td><td>Send follow-up, offer live call</td></tr>
-        <tr><td>Napa United</td><td>Proposal</td><td style="color:var(--accent)">18 days</td><td>Check in with decision maker</td></tr>
-        <tr><td>Rangers FC</td><td>Discovery</td><td style="color:var(--yellow)">14 days</td><td>Book next discovery call</td></tr>
+        <tr><td>Team 8</td><td>Demo Sent</td><td style="color:var(--accent)">22 days</td><td>Send follow-up, offer live call</td></tr>
+        <tr><td>Team 9</td><td>Proposal</td><td style="color:var(--accent)">18 days</td><td>Check in with decision maker</td></tr>
+        <tr><td>Team 10</td><td>Discovery</td><td style="color:var(--yellow)">14 days</td><td>Book next discovery call</td></tr>
         <tr><td>Utah Red Wolves</td><td>Negotiation</td><td style="color:var(--yellow)">15 days</td><td>Confirm contract timeline</td></tr>
       </tbody></table>`
   },
@@ -1048,7 +1048,7 @@ const PEEKS = {
     desc: 'Enter a club name before a call and Claude searches the web, pulls their league, team count, any public info, and generates a clean 1-page brief with 3 talking points and a recommended angle tailored to that club type.',
     data: ['Web search', 'Manual input'],
     visual: `
-      <div style="font-size:12px;font-weight:600;margin-bottom:10px;">Real Colorado — Pre-Call Brief</div>
+      <div style="font-size:12px;font-weight:600;margin-bottom:10px;">Team 11 — Pre-Call Brief</div>
       <div class="mock-bar-row"><span class="mock-bar-label">League</span><span style="font-size:11px;color:var(--text)">ECNL / MLS Next</span></div>
       <div class="mock-bar-row"><span class="mock-bar-label">Teams (est.)</span><span style="font-size:11px;color:var(--text)">28 competitive teams</span></div>
       <div class="mock-bar-row"><span class="mock-bar-label">Location</span><span style="font-size:11px;color:var(--text)">Colorado · Aurora area</span></div>
@@ -1062,8 +1062,8 @@ const PEEKS = {
     data: ['Manual input'],
     visual: `
       <div class="mock-email">
-        <div class="mock-email-subject">Hudl for Almaden FC — Quick Note</div>
-        <div class="mock-email-body">Hi Paolo,<br><br>Came across Almaden FC while looking at strong ECNL clubs in NorCal — really impressive program you've built there.<br><br>I work with clubs like yours to give coaches a faster way to analyze game film and help athletes get in front of college programs. Thought it might be worth a quick conversation — would a 20-min call next week work?<br><br>Taylor @ Hudl</div>
+        <div class="mock-email-subject">Hudl for Team 12 — Quick Note</div>
+        <div class="mock-email-body">Hi Coach C,<br><br>Came across Team 12 while looking at strong ECNL clubs in NorCal — really impressive program you've built there.<br><br>I work with clubs like yours to give coaches a faster way to analyze game film and help athletes get in front of college programs. Thought it might be worth a quick conversation — would a 20-min call next week work?<br><br>Taylor @ Hudl</div>
       </div>`
   },
   quota: {
@@ -1074,12 +1074,12 @@ const PEEKS = {
     visual: `
       <div class="mock-stat-row">
         <div class="mock-stat"><div class="mock-stat-num" style="color:var(--green)">67%</div><div class="mock-stat-lbl">Attained</div></div>
-        <div class="mock-stat"><div class="mock-stat-num" style="color:var(--yellow)">$48k</div><div class="mock-stat-lbl">To Go</div></div>
+        <div class="mock-stat"><div class="mock-stat-num" style="color:var(--yellow)">—</div><div class="mock-stat-lbl">To Go</div></div>
         <div class="mock-stat"><div class="mock-stat-num">6</div><div class="mock-stat-lbl">Weeks Left</div></div>
       </div>
       <div style="font-size:11px;color:var(--muted);margin-bottom:8px;font-weight:500;">Pace to Goal</div>
       <div class="mock-bar-row"><span class="mock-bar-label">This week</span><div class="mock-bar-track"><div class="mock-bar-fill" style="width:67%;background:var(--green)"></div></div><span class="mock-bar-val">67%</span></div>
-      <div class="mock-bar-row"><span class="mock-bar-label">Needed / wk</span><div class="mock-bar-track"><div class="mock-bar-fill" style="width:100%;background:var(--yellow)"></div></div><span class="mock-bar-val">$8k</span></div>`
+      <div class="mock-bar-row"><span class="mock-bar-label">Needed / wk</span><div class="mock-bar-track"><div class="mock-bar-fill" style="width:100%;background:var(--yellow)"></div></div><span class="mock-bar-val">—</span></div>`
   },
   director: {
     title: 'Director Book of Business Dashboard',
@@ -1106,11 +1106,11 @@ const PEEKS = {
     data: ['Salesforce export', 'Manual'],
     visual: `
       <table class="mock-table"><thead><tr><th>Club</th><th>Renews</th><th>Last Contact</th><th>Risk</th></tr></thead><tbody>
-        <tr><td>Midwest United</td><td>Apr 1</td><td>Today</td><td><span class="dot dot-green"></span>Low</td></tr>
-        <tr><td>Alabama FC</td><td>Apr 15</td><td>4 days ago</td><td><span class="dot dot-green"></span>Low</td></tr>
-        <tr><td>FC 1974</td><td>Mar 28</td><td>18 days ago</td><td><span class="dot dot-yellow"></span>Medium</td></tr>
-        <tr><td>Indy Premier</td><td>Mar 22</td><td>31 days ago</td><td><span class="dot dot-red"></span>High</td></tr>
-        <tr><td>Ohio Elite</td><td>Apr 5</td><td>38 days ago</td><td><span class="dot dot-red"></span>High</td></tr>
+        <tr><td>Team 2</td><td>Apr 1</td><td>Today</td><td><span class="dot dot-green"></span>Low</td></tr>
+        <tr><td>Team 3</td><td>Apr 15</td><td>4 days ago</td><td><span class="dot dot-green"></span>Low</td></tr>
+        <tr><td>Team 6</td><td>Mar 28</td><td>18 days ago</td><td><span class="dot dot-yellow"></span>Medium</td></tr>
+        <tr><td>Team 5</td><td>Mar 22</td><td>31 days ago</td><td><span class="dot dot-red"></span>High</td></tr>
+        <tr><td>Team 16</td><td>Apr 5</td><td>38 days ago</td><td><span class="dot dot-red"></span>High</td></tr>
       </tbody></table>`
   },
   rollup: {
@@ -1149,12 +1149,12 @@ const PEEKS = {
     data: ['Salesforce export', 'Manual pipeline paste'],
     visual: `
       <table class="mock-table"><thead><tr><th>Club</th><th>Value</th><th>Stage</th><th>Score</th></tr></thead><tbody>
-        <tr><td>Real Colorado</td><td>$22k</td><td>Negotiation</td><td style="color:var(--green)">87%</td></tr>
-        <tr><td>City SC</td><td>$18k</td><td>Proposal</td><td style="color:var(--green)">74%</td></tr>
-        <tr><td>La Roca FC</td><td>$14k</td><td>Demo Sent</td><td style="color:var(--yellow)">51%</td></tr>
-        <tr><td>Zeta FC</td><td>$9k</td><td>Discovery</td><td style="color:var(--accent)">28%</td></tr>
+        <tr><td>Team 11</td><td>—</td><td>Negotiation</td><td style="color:var(--green)">87%</td></tr>
+        <tr><td>Team 13</td><td>—</td><td>Proposal</td><td style="color:var(--green)">74%</td></tr>
+        <tr><td>Team 14</td><td>—</td><td>Demo Sent</td><td style="color:var(--yellow)">51%</td></tr>
+        <tr><td>Team 15</td><td>—</td><td>Discovery</td><td style="color:var(--accent)">28%</td></tr>
       </tbody></table>
-      <div style="margin-top:12px;font-size:12px;color:var(--muted);">Forecast Total: <span style="color:var(--text);font-weight:600;">$46.8k weighted</span></div>`
+      <div style="margin-top:12px;font-size:12px;color:var(--muted);">Forecast Total: <span style="color:var(--text);font-weight:600;">—</span></div>`
   },
   dailyplan: {
     title: 'Daily Priority Planner',
@@ -1164,12 +1164,12 @@ const PEEKS = {
     visual: `
       <div style="font-size:11px;color:var(--muted);margin-bottom:10px;font-weight:500;">Monday, Mar 3 · Your Day</div>
       <ul class="mock-checklist">
-        <li><span class="ck ck-pend"></span>9–10am · Chicago Rush camera issue (open support)</li>
-        <li><span class="ck ck-pend"></span>10–11am · Prep for Midwest United Zoom</li>
-        <li><span class="ck ck-pend"></span>11am · Zoom with Doug Barrow</li>
-        <li><span class="ck ck-pend"></span>Reply to Julie McKinney (awaiting 1 day)</li>
-        <li><span class="ck ck-pend"></span>Send follow-up to Indy Premier (untouched 14d)</li>
-        <li><span class="ck ck-pend"></span>Update Alabama FC renewal notes</li>
+        <li><span class="ck ck-pend"></span>9–10am · Team 4 camera issue (open support)</li>
+        <li><span class="ck ck-pend"></span>10–11am · Prep for Team 2 Zoom</li>
+        <li><span class="ck ck-pend"></span>11am · Zoom with Coach A</li>
+        <li><span class="ck ck-pend"></span>Reply to Coach B (awaiting 1 day)</li>
+        <li><span class="ck ck-pend"></span>Send follow-up to Team 5 (untouched 14d)</li>
+        <li><span class="ck ck-pend"></span>Update Team 3 renewal notes</li>
       </ul>`
   },
   meetingprep: {
@@ -1178,7 +1178,7 @@ const PEEKS = {
     desc: 'Enter a contact name 10 minutes before a meeting — Claude pulls your recent email thread with them and generates 3 talking points, the open items from the last conversation, and a suggested ask for this call.',
     data: ['Outlook email history', 'Calendar event'],
     visual: `
-      <div style="font-size:11px;color:var(--muted);margin-bottom:8px;font-weight:500;">Doug Barrow · Midwest United · 11am today</div>
+      <div style="font-size:11px;color:var(--muted);margin-bottom:8px;font-weight:500;">Coach A · Team 2 · 11am today</div>
       <div style="font-size:11px;color:var(--muted);margin-bottom:5px;font-weight:500;">Talking Points</div>
       <div style="font-size:12px;color:var(--text);line-height:1.7;margin-bottom:10px;">① Follow up on Assist+ credit feedback he sent<br>② Pilot program — U19 team confirmed, next steps<br>③ Camera issue from last month — was it resolved?</div>
       <div style="font-size:11px;color:var(--muted);margin-bottom:5px;font-weight:500;">Suggested Ask</div>
@@ -1192,7 +1192,7 @@ const PEEKS = {
     visual: `
       <div class="mock-email">
         <div class="mock-email-subject">Taylor's Week · Feb 24–28</div>
-        <div class="mock-email-body">📅 <strong>12 meetings</strong> held · 3 new accounts onboarded<br>✉️ <strong>49 emails sent</strong> · 31 replies received (63%)<br>💼 <strong>Deals moved:</strong> Alabama FC → Negotiation<br>🚨 <strong>Open items:</strong> FC 1974 camera issue, Julie follow-up<br>✅ <strong>Highlight:</strong> Midwest United Assist+ renewal confirmed</div>
+        <div class="mock-email-body">📅 <strong>12 meetings</strong> held · 3 new accounts onboarded<br>✉️ <strong>49 emails sent</strong> · 31 replies received (63%)<br>💼 <strong>Deals moved:</strong> Team 3 → Negotiation<br>🚨 <strong>Open items:</strong> Team 6 camera issue, Coach B follow-up<br>✅ <strong>Highlight:</strong> Team 2 Assist+ renewal confirmed</div>
       </div>`
   },
   conv: {
