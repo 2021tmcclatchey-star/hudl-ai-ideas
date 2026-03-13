@@ -384,69 +384,6 @@
   .ck-pend { background: var(--card2); border: 1px solid var(--border); }
   .ck-done-text { color: var(--muted); text-decoration: line-through; }
 
-  /* FEATURED BAND */
-  .featured-band {
-    margin: 0 48px 48px;
-    background: linear-gradient(135deg, rgba(255,99,0,0.09) 0%, rgba(255,99,0,0.03) 60%, rgba(74,144,226,0.03) 100%);
-    border: 1px solid rgba(255,99,0,0.22);
-    border-radius: 16px;
-    overflow: hidden;
-    position: relative;
-  }
-  .featured-band::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-image: radial-gradient(rgba(255,99,0,0.05) 1px, transparent 1px);
-    background-size: 18px 18px;
-    mask-image: linear-gradient(to right, black 0%, transparent 60%);
-    -webkit-mask-image: linear-gradient(to right, black 0%, transparent 60%);
-    pointer-events: none;
-    z-index: 0;
-  }
-  .featured-inner {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0;
-    align-items: center;
-  }
-  .featured-left {
-    padding: 36px 40px;
-    position: relative; z-index: 1;
-  }
-  .featured-eyebrow {
-    font-size: 10px; text-transform: uppercase; letter-spacing: 2px;
-    color: var(--hudl); font-weight: 600; margin-bottom: 10px;
-  }
-  .featured-title {
-    font-family: 'Barlow', sans-serif; font-size: 24px; font-weight: 800;
-    margin-bottom: 12px; line-height: 1.2; letter-spacing: -0.3px;
-  }
-  .featured-desc {
-    font-size: 13px; color: var(--muted); line-height: 1.7;
-    font-weight: 400; margin-bottom: 22px;
-  }
-  .featured-btn {
-    display: inline-flex; align-items: center; gap: 8px;
-    background: var(--hudl); color: white;
-    padding: 11px 22px; border-radius: 9px;
-    font-family: 'Barlow', sans-serif; font-size: 13px; font-weight: 700;
-    text-decoration: none; transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
-    letter-spacing: 0.3px;
-  }
-  .featured-btn:hover { background: #e55800; transform: translateY(-1px); box-shadow: 0 4px 18px rgba(255,99,0,0.35); }
-
-  .featured-right {
-    padding: 24px 28px 24px 0;
-    position: relative; z-index: 1;
-  }
-  .featured-preview {
-    background: #111;
-    border: 1px solid #2a2a2a;
-    border-radius: 10px;
-    overflow: hidden;
-    font-family: 'Barlow', sans-serif;
-  }
   .fp-bar {
     background: #1a1a1a;
     border-bottom: 1px solid #222;
@@ -479,15 +416,73 @@
     border: 1px solid rgba(217,47,76,0.25); padding: 2px 7px; border-radius: 20px;
   }
 
+  /* EXAMPLES BAND (two-tile layout) */
+  .examples-band {
+    margin: 0 48px 48px;
+    position: relative;
+  }
+  .examples-band-label {
+    font-size: 10px; text-transform: uppercase; letter-spacing: 2px;
+    color: var(--hudl); font-weight: 600; margin-bottom: 16px;
+  }
+  .examples-band-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .example-tile {
+    background: linear-gradient(135deg, rgba(255,99,0,0.06) 0%, rgba(255,99,0,0.02) 100%);
+    border: 1px solid rgba(255,99,0,0.2);
+    border-radius: 14px;
+    overflow: hidden;
+    display: flex; flex-direction: column;
+    position: relative;
+  }
+  .example-tile::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba(255,99,0,0.05) 1px, transparent 1px);
+    background-size: 18px 18px;
+    mask-image: linear-gradient(to bottom, black 0%, transparent 50%);
+    -webkit-mask-image: linear-gradient(to bottom, black 0%, transparent 50%);
+    pointer-events: none; z-index: 0;
+  }
+  .example-tile-preview {
+    background: #111;
+    border-bottom: 1px solid #2a2a2a;
+    font-family: 'Barlow', sans-serif;
+    position: relative; z-index: 1;
+  }
+  .example-tile-body {
+    padding: 20px 24px 22px;
+    position: relative; z-index: 1;
+  }
+  .example-tile-title {
+    font-family: 'Barlow', sans-serif; font-size: 16px; font-weight: 700;
+    margin-bottom: 6px; letter-spacing: -0.2px;
+  }
+  .example-tile-desc {
+    font-size: 13px; color: var(--muted); line-height: 1.65;
+    font-weight: 400; margin-bottom: 16px;
+  }
+  .example-tile-btn {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--hudl); color: white;
+    padding: 10px 20px; border-radius: 8px;
+    font-family: 'Barlow', sans-serif; font-size: 13px; font-weight: 700;
+    text-decoration: none; transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+    letter-spacing: 0.3px;
+  }
+  .example-tile-btn:hover { background: #e55800; transform: translateY(-1px); box-shadow: 0 4px 16px rgba(255,99,0,0.35); }
+
   @media (max-width: 900px) {
-    .featured-inner { grid-template-columns: 1fr; }
-    .featured-right { padding: 0 28px 28px; }
+    .examples-band-grid { grid-template-columns: 1fr; }
   }
 
   @media (max-width: 680px) {
     .header, .hero, .content { padding-left: 20px; padding-right: 20px; }
-    .featured-band { margin: 0 20px 40px; }
-    .featured-left { padding: 24px 24px 16px; }
+    .examples-band { margin: 0 20px 40px; }
     .form-grid { grid-template-columns: 1fr; }
     .examples { grid-template-columns: 1fr; }
     .shared-examples { grid-template-columns: 1fr; }
@@ -513,45 +508,69 @@
   <p>Real examples of how CSMs, AEs, and managers are using AI to move faster every day. Click any card to see how it works — then submit your own idea at the bottom.</p>
 </div>
 
-<!-- FEATURED LIVE EXAMPLE -->
-<div class="featured-band">
-  <div class="featured-inner">
-    <div class="featured-left">
-      <div class="featured-eyebrow">⚡ Live Example — Already Built</div>
-      <div class="featured-title">CSM Command Center</div>
-      <div class="featured-desc">A fully working dashboard built for CSMs — account health scores, renewal pipeline, onboarding tracker, expansion signals, quick-share resources, call prep, and a notes canvas. This is the kind of thing that can be built from your data.</div>
-      <a href="https://2021tmcclatchey-star.github.io/hudl-csm-dashboard/" target="_blank" class="featured-btn">Open Live Dashboard →</a>
-    </div>
-    <div class="featured-right">
-      <div class="featured-preview">
+<!-- LIVE EXAMPLES -->
+<div class="examples-band">
+  <div class="examples-band-label">⚡ Already Built — Open in Your Browser</div>
+  <div class="examples-band-grid">
+
+    <div class="example-tile">
+      <div class="example-tile-preview">
         <div class="fp-bar">
           <div class="fp-dot"></div><div class="fp-dot"></div><div class="fp-dot"></div>
-          <span style="font-size:10px;color:#555;margin-left:8px;font-family:'Barlow',sans-serif;">hudl-csm-dashboard</span>
+          <span style="font-size:10px;color:#555;margin-left:8px;">csm-command-center</span>
         </div>
         <div class="fp-content">
           <div class="fp-row"><span class="fp-label">🏠 Home</span><span class="fp-label">📋 Accounts</span><span class="fp-label active">Risk</span><span class="fp-label">📚 Resources</span></div>
           <div class="fp-stats">
             <div class="fp-stat"><span class="fp-num red">7</span><span class="fp-slabel">High Risk</span></div>
-            <div class="fp-stat"><span class="fp-num yellow">2</span><span class="fp-slabel">This Week</span></div>
-            <div class="fp-stat"><span class="fp-num green">—</span><span class="fp-slabel">Territory ARR</span></div>
+            <div class="fp-stat"><span class="fp-num yellow">4</span><span class="fp-slabel">Renewals</span></div>
+            <div class="fp-stat"><span class="fp-num green">41</span><span class="fp-slabel">Accounts</span></div>
           </div>
           <div class="fp-card">
-            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;">
-              <span style="font-size:11px;font-weight:600;">Team 1</span>
-              <span class="fp-risk">HIGH RISK</span>
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
+              <span style="font-size:11px;font-weight:600;">Nationals SC</span>
+              <span class="fp-risk">CRITICAL</span>
             </div>
-            <div style="font-size:10px;color:#555;line-height:1.5;">Renewal Aug 2025 overdue<br>130 support cases · No CSM contact on record</div>
-          </div>
-          <div class="fp-card" style="opacity:0.6;">
-            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;">
-              <span style="font-size:11px;font-weight:600;">Sporting Columbus</span>
-              <span class="fp-risk">HIGH RISK</span>
-            </div>
-            <div style="font-size:10px;color:#555;line-height:1.5;">Renewal Sep 2025 overdue</div>
+            <div style="font-size:10px;color:#555;line-height:1.5;">$84.7K ARR · Renewal overdue · 130 support cases</div>
           </div>
         </div>
       </div>
+      <div class="example-tile-body">
+        <div class="example-tile-title">CSM Command Center</div>
+        <div class="example-tile-desc">Account health, renewal pipeline, churn risk scoring, onboarding tracker, and call prep — all in one dashboard.</div>
+        <a href="https://2021tmcclatchey-star.github.io/hudl-ai-ideas/csm-command-center.html" target="_blank" class="example-tile-btn">Open Example →</a>
+      </div>
     </div>
+
+    <div class="example-tile">
+      <div class="example-tile-preview">
+        <div class="fp-bar">
+          <div class="fp-dot"></div><div class="fp-dot"></div><div class="fp-dot"></div>
+          <span style="font-size:10px;color:#555;margin-left:8px;">camera-risk-monitor</span>
+        </div>
+        <div class="fp-content">
+          <div class="fp-row"><span class="fp-label active">🎥 Cameras</span><span class="fp-label">📍 Territory</span><span class="fp-label">⚠️ Alerts</span></div>
+          <div class="fp-stats">
+            <div class="fp-stat"><span class="fp-num red">3</span><span class="fp-slabel">Offline</span></div>
+            <div class="fp-stat"><span class="fp-num yellow">5</span><span class="fp-slabel">At Risk</span></div>
+            <div class="fp-stat"><span class="fp-num green">28</span><span class="fp-slabel">Online</span></div>
+          </div>
+          <div class="fp-card">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
+              <span style="font-size:11px;font-weight:600;">Rockford Raptors</span>
+              <span class="fp-risk">OFFLINE</span>
+            </div>
+            <div style="font-size:10px;color:#555;line-height:1.5;">Stalled upload · Battery issue · 3 open cases</div>
+          </div>
+        </div>
+      </div>
+      <div class="example-tile-body">
+        <div class="example-tile-title">Camera Risk Monitor</div>
+        <div class="example-tile-desc">Real-time camera health across your territory — offline alerts, stalled uploads, support case clustering, and hardware risk flags.</div>
+        <a href="https://2021tmcclatchey-star.github.io/hudl-ai-ideas/camera-risk-monitor.html" target="_blank" class="example-tile-btn">Open Example →</a>
+      </div>
+    </div>
+
   </div>
 </div>
 
