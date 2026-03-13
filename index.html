@@ -3,19 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hudl AI Ideas</title>
+<title>Claude / AI — Ideas & Use Cases</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400&display=swap');
 
   :root {
     --hudl: #FF6300;
-    --dark: #1A1C1C;
-    --mid: #2D3232;
-    --card: #252B2B;
-    --card2: #363C3C;
-    --border: #424747;
-    --text: #FFFFFF;
-    --muted: #9BA0A0;
+    --dark: #1E2626;
+    --mid: #263030;
+    --card: #2A3434;
+    --card2: #344040;
+    --border: #3E4C4C;
+    --text: #F5F8F8;
+    --muted: #8FA0A0;
     --accent: #FF6300;
     --green: #50C878;
     --blue: #4A90E2;
@@ -33,13 +33,17 @@
     min-height: 100vh;
     padding-bottom: 100px;
     overflow-x: hidden;
+    background-image: radial-gradient(rgba(255,99,0,0.04) 1px, transparent 1px);
+    background-size: 28px 28px;
   }
 
   /* HEADER */
   .header {
-    background: var(--mid);
-    border-bottom: 1px solid var(--border);
-    padding: 24px 48px;
+    background: rgba(38,48,48,0.82);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(255,99,0,0.12);
+    padding: 20px 48px;
     display: flex; align-items: center; justify-content: space-between;
     position: sticky; top: 0; z-index: 200;
   }
@@ -100,6 +104,15 @@
     display: flex; align-items: center; gap: 14px;
     margin-bottom: 20px; padding-bottom: 14px;
     border-bottom: 1px solid var(--border);
+    position: relative;
+  }
+  .section-header::before {
+    content: '';
+    position: absolute;
+    bottom: -1px; left: 0;
+    width: 40px; height: 2px;
+    background: var(--hudl);
+    border-radius: 2px;
   }
   .section-icon {
     width: 38px; height: 38px; border-radius: 10px;
@@ -124,18 +137,19 @@
 
   /* CLICKABLE CARD */
   .ex-card {
-    background: var(--card);
+    background: linear-gradient(160deg, var(--card) 0%, rgba(42,52,52,0.7) 100%);
     border: 1px solid var(--border);
     border-radius: 12px; padding: 18px 20px;
     cursor: pointer;
-    transition: border-color 0.2s, transform 0.15s, box-shadow 0.2s;
+    transition: border-color 0.2s, transform 0.18s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.2s;
     position: relative;
     overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
   }
   .ex-card:hover {
-    border-color: rgba(255,99,0,0.35);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 28px rgba(0,0,0,0.4), 0 0 0 1px rgba(255,99,0,0.08);
+    border-color: rgba(255,99,0,0.4);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.35), 0 0 0 1px rgba(255,99,0,0.10), 0 0 24px rgba(255,99,0,0.06);
   }
   .ex-card::after {
     content: "Click to preview →";
@@ -476,6 +490,17 @@
   }
   .example-tile-btn:hover { background: #e55800; transform: translateY(-1px); box-shadow: 0 4px 16px rgba(255,99,0,0.35); }
 
+  /* scroll fade-in */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 0.55s ease, transform 0.55s ease;
+  }
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
   @media (max-width: 900px) {
     .examples-band-grid { grid-template-columns: 1fr; }
   }
@@ -495,21 +520,20 @@
   <div class="logo">
     <div class="logo-mark">H</div>
     <div>
-      <div class="logo-text">Hudl AI</div>
-      <div class="logo-sub">Ideas &amp; Examples</div>
+      <div class="logo-text">Claude / AI</div>
+      <div class="logo-sub">Ideas &amp; Use Cases</div>
     </div>
   </div>
-  <div class="badge">🤖 Powered by Claude</div>
 </header>
 
 <div class="hero">
   <div class="hero-glow"></div>
-  <h1>AI is already <span>your tool.</span><br>Here's how to use it.</h1>
-  <p>Real examples of how CSMs, AEs, and managers are using AI to move faster every day. Click any card to see how it works — then submit your own idea at the bottom.</p>
+  <h1><span>Claude / AI</span><br>Ideas &amp; Use Cases</h1>
+  <p>Real examples of how people across Hudl are using AI to work smarter. Click any card to see a preview — then submit your own idea at the bottom.</p>
 </div>
 
 <!-- LIVE EXAMPLES -->
-<div class="examples-band">
+<div class="examples-band fade-in">
   <div class="examples-band-label">⚡ Already Built — Open in Your Browser</div>
   <div class="examples-band-grid">
 
@@ -579,11 +603,11 @@
 
 
   <!-- ===== CSM ===== -->
-  <div class="section">
+  <div class="section fade-in">
     <div class="section-header">
       <div class="section-icon icon-csm">🎯</div>
       <div>
-        <div class="section-title">Customer Success Managers</div>
+        <div class="section-title">Account &amp; Customer Teams</div>
         <div class="section-subtitle">Account health, onboarding, renewals, follow-ups, contact management</div>
       </div>
     </div>
@@ -648,93 +672,18 @@
       </div>
 
     </div>
-    <div class="idea-box" data-section="CSM">
-      <label>✍️ Your CSM Ideas</label>
-      <textarea placeholder="e.g. I wish there was an easier way to track which accounts I haven't touched in a while...&#10;&#10;Or: Something that preps me for a renewal conversation by pulling everything I know about that account..."></textarea>
-    </div>
-  </div>
-
-  <!-- ===== AE ===== -->
-  <div class="section">
-    <div class="section-header">
-      <div class="section-icon icon-ae">💼</div>
-      <div>
-        <div class="section-title">Account Executives</div>
-        <div class="section-subtitle">Prospecting, pipeline, outreach, demos, engagement scoring</div>
-      </div>
-    </div>
-    <div class="examples">
-
-      <div class="ex-card" onclick="openPeek('engagement')">
-        <div class="ex-top">
-          <div class="ex-title">Low-Engagement Contact Cleaner</div>
-          <div class="built-badge">✓ Built</div>
-        </div>
-        <div class="ex-desc">Analyzes Outlook to identify prospects who've been in a cadence but never replied or booked a call — clear list of who to remove, pause, or try differently.</div>
-        <div class="ex-footer">
-          <span class="ex-tag t-tool">Tool</span>
-          <span class="ex-tag t-auto">Automation</span>
-          <span class="ex-source">Outlook</span>
-        </div>
-      </div>
-
-      <div class="ex-card" onclick="openPeek('pipeline')">
-        <div class="ex-top">
-          <div class="ex-title">Stale Pipeline Report</div>
-        </div>
-        <div class="ex-desc">Weekly digest of deals stuck in the same stage for 14+ days, pulled from your Salesforce export — with a suggested next action for each one.</div>
-        <div class="ex-footer">
-          <span class="ex-tag t-dash">Dashboard</span>
-          <span class="ex-source">Salesforce export</span>
-        </div>
-      </div>
-
-      <div class="ex-card" onclick="openPeek('brief')">
-        <div class="ex-top">
-          <div class="ex-title">Pre-Call Prospect Brief</div>
-        </div>
-        <div class="ex-desc">Enter a club name — Claude searches the web, pulls league info, team count, and generates a 1-page brief with talking points and a suggested angle before your call.</div>
-        <div class="ex-footer">
-          <span class="ex-tag t-tool">Tool</span>
-          <span class="ex-source">Web search + manual</span>
-        </div>
-      </div>
-
-      <div class="ex-card" onclick="openPeek('outreach')">
-        <div class="ex-top">
-          <div class="ex-title">Outreach Email Writer</div>
-        </div>
-        <div class="ex-desc">Enter a prospect's name, club, and what you know about them — Claude writes a personalized cold outreach or follow-up in your voice. Tunable by tone.</div>
-        <div class="ex-footer">
-          <span class="ex-tag t-tmpl">Template</span>
-          <span class="ex-source">Manual input</span>
-        </div>
-      </div>
-
-      <div class="ex-card" onclick="openPeek('quota')">
-        <div class="ex-top">
-          <div class="ex-title">Quota Progress Tracker</div>
-        </div>
-        <div class="ex-desc">Visual app showing quota attainment, pace to goal, and what you need to close each remaining week. Update manually or paste from Salesforce.</div>
-        <div class="ex-footer">
-          <span class="ex-tag t-dash">Dashboard</span>
-          <span class="ex-source">Salesforce export / manual</span>
-        </div>
-      </div>
-
-    </div>
-    <div class="idea-box" data-section="AE">
-      <label>✍️ Your AE Ideas</label>
-      <textarea placeholder="e.g. I want something that tells me which prospects are most worth my time each morning...&#10;&#10;Or: A tool that auto-writes follow-up emails using my notes after demos..."></textarea>
+    <div class="idea-box" data-section="Account Teams">
+      <label>✍️ Your Ideas — Account &amp; Customer Teams</label>
+      <textarea placeholder="e.g. I wish there was an easier way to see which accounts I haven't touched in a while...&#10;&#10;Or: Something that preps me before a call by pulling everything I know about that account..."></textarea>
     </div>
   </div>
 
   <!-- ===== MANAGEMENT ===== -->
-  <div class="section">
+  <div class="section fade-in">
     <div class="section-header">
       <div class="section-icon icon-mgmt">📊</div>
       <div>
-        <div class="section-title">Management / Directors</div>
+        <div class="section-title">Team Leads &amp; Managers</div>
         <div class="section-subtitle">Team visibility, performance, forecasting, reporting</div>
       </div>
     </div>
@@ -745,7 +694,7 @@
           <div class="ex-title">Director Book of Business Dashboard</div>
           <div class="built-badge">✓ Built</div>
         </div>
-        <div class="ex-desc">Visual overview of all accounts by CSM — showing access tier, last contact date, and renewal status. Built from exports, no live integration needed.</div>
+        <div class="ex-desc">Visual overview of all accounts by rep — showing access tier, last contact date, and renewal status. Built from exports, no live integration needed.</div>
         <div class="ex-footer">
           <span class="ex-tag t-dash">Dashboard</span>
           <span class="ex-source">Salesforce export / manual</span>
@@ -798,27 +747,27 @@
 
     </div>
     <div class="idea-box" data-section="Management">
-      <label>✍️ Your Management Ideas</label>
+      <label>✍️ Your Ideas — Team Leads &amp; Managers</label>
       <textarea placeholder="e.g. I want a faster way to see which reps are hitting their activity benchmarks each week...&#10;&#10;Or: Something that auto-builds my monthly report so I'm not making slides from scratch..."></textarea>
     </div>
   </div>
 
   <!-- ===== SHARED DASHBOARDS ===== -->
-  <div class="shared-band">
+  <div class="shared-band fade-in">
     <h3><span style="font-size:20px">🔗</span> Shared Team Dashboards</h3>
     <p>Some of the most useful tools aren't just for one person — they're shared views that keep the whole team aligned. These are dashboards or trackers that multiple people on the team can access, update, and reference. Built once, used by everyone.</p>
     <div class="shared-examples">
       <div class="shared-ex">
         <div class="shared-ex-title">Team Account Health Board</div>
-        <div class="shared-ex-desc">One view showing all accounts across every CSM — last contact, tier, renewal date. Directors and CSMs see the same data simultaneously.</div>
+        <div class="shared-ex-desc">One view showing all accounts across every rep — last contact, tier, renewal date. Everyone sees the same data simultaneously.</div>
       </div>
       <div class="shared-ex">
         <div class="shared-ex-title">Pilot Program Tracker</div>
-        <div class="shared-ex-desc">Live tracker showing which clubs are in a pilot, their status, who's the CSM owner, and what's outstanding — visible to everyone working the program.</div>
+        <div class="shared-ex-desc">Live tracker showing which clubs are in a pilot, their status, who's the owner, and what's outstanding — visible to everyone working the program.</div>
       </div>
       <div class="shared-ex">
         <div class="shared-ex-title">New Account Handoff Board</div>
-        <div class="shared-ex-desc">When an AE closes a deal, the CSM onboarding status becomes visible to the AE too — no more "where are we with this account?" Slack messages.</div>
+        <div class="shared-ex-desc">When a deal closes, the onboarding status becomes visible to everyone — no more "where are we with this account?" Slack messages.</div>
       </div>
       <div class="shared-ex">
         <div class="shared-ex-title">Club Issue Log</div>
@@ -828,7 +777,7 @@
   </div>
 
   <!-- ===== QUICK AUTOMATIONS ===== -->
-  <div class="section">
+  <div class="section fade-in">
     <div class="section-header">
       <div class="section-icon icon-auto">⚡</div>
       <div>
@@ -860,7 +809,7 @@
   </div>
 
   <!-- ===== OTHER ===== -->
-  <div class="section">
+  <div class="section fade-in">
     <div class="section-header">
       <div class="section-icon icon-other">🌀</div>
       <div>
@@ -917,7 +866,7 @@
     </div>
     <div class="idea-box" data-section="Other">
       <label>✍️ Other Ideas — weird, personal, or anything in between</label>
-      <textarea placeholder="e.g. An app to track my travel schedule for tournament weekends...&#10;&#10;Or: Something to help me organize my notes from calls into action items automatically...&#10;&#10;Weird ideas are welcome. Go for it."></textarea>
+      <textarea placeholder="e.g. An app to track my schedule for tournament weekends...&#10;&#10;Or: Something to help me organize my notes from calls into action items automatically..."></textarea>
     </div>
   </div>
 
@@ -939,9 +888,10 @@
         <label>Your Role</label>
         <select id="inputRole">
           <option value="" disabled selected>Select your role...</option>
-          <option>CSM</option>
-          <option>Account Executive</option>
-          <option>Management / Director</option>
+          <option>Account & Customer Teams</option>
+          <option>Sales</option>
+          <option>Team Lead / Manager</option>
+          <option>Operations</option>
           <option>Other</option>
         </select>
       </div>
@@ -1445,6 +1395,12 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('keydown', e => {
   if (e.key === 'Escape') closePeek();
 });
+
+// scroll fade-in
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+}, { threshold: 0.08 });
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 </script>
 </body>
 </html>
